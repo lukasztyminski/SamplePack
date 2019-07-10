@@ -1,0 +1,17 @@
+/* TEAM */
+Your title: Łukasz Tymiński - Half Time.
+Site: lttyminski@gmail.com
+Location: Biała Podlaska, Polska.
+
+[...]
+
+/* THANKS */
+Name: Łukasz Tymiński
+
+[...]
+
+/* SITE */
+Last update: 2019/06/21
+Standards: HTML5, CSS3,..
+Components: Modernizr, jQuery, etc.
+Software: Software used for the development
