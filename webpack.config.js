@@ -1,4 +1,5 @@
-const path = require('path');
+const resolve = require('path').resolve;
+const join = require('path').join;
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -11,7 +12,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CONFIG = {
   entry: './src/js/app.js',
   output: {
-    path: path.resolve(__dirname, './build'),
+    path: resolve(__dirname, './build'),
     publicPath: 'build',
     filename: 'app.js',
   },
@@ -32,7 +33,7 @@ const CONFIG = {
         replacement: '',
       },
       {
-        pattern: '<link rel="stylesheet" href="css/app.css" />',
+        pattern: '<link rel="stylesheet" href="../css/app.bundle.css" />',
         replacement: '',
       },
     ]),
@@ -80,7 +81,7 @@ const CONFIG = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'src'),
+    contentBase: join(__dirname, 'src'),
     compress: true,
     port: 3000,
     hot: false,
@@ -91,7 +92,7 @@ const CONFIG = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-  CONFIG.output.publicPath = './';
+  CONFIG.output.publicPath = '/sp';
   CONFIG.output.filename = 'js/app.js';
 }
 

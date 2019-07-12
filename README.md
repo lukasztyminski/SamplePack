@@ -24,4 +24,6 @@ To run the production build:
   npm run build
 ```
 
+On production change link css to `href="css/app.bundle.css"`
+
 Copy the content of /build to your production server for production deployment.
