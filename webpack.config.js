@@ -92,7 +92,7 @@ const CONFIG = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-  CONFIG.output.publicPath = '/sp';
+  CONFIG.output.publicPath = './';
   CONFIG.output.filename = 'js/app.js';
 }
 
