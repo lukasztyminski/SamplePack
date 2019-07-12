@@ -1,0 +1,162 @@
+.sectionTitle {
+  @include screen(desktop) {
+    padding: get-vw(83px) 0 get-vw(91px);
+  }
+
+  &__title {
+    margin-bottom: 31px;
+    @include screen(desktop) {
+      margin-bottom: get-vw(41px);
+    }
+  }
+
+  &__cols {
+    @include flex-center(column);
+    @include screen(desktop) {
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__col {
+    @include screen(desktop) {
+      margin-left: get-vw(3px);
+      max-width: get-vw(550px);
+      &:last-child {
+        margin-left: get-vw(40px);
+      }
+    }
+  }
+}
+
+.anotherTitle {
+  @include screen(desktop) {
+    padding: get-vw(90px) 0 get-vw(60px);
+  }
+  &__title {
+    margin-bottom: 3rem;
+    @include screen(desktop) {
+      margin-bottom: get-vw(35px);
+    }
+  }
+  &__imgWrap {
+    float: left;
+    @include screen(desktop) {
+      margin: get-vw(7px) get-vw(38px) get-vw(35px) get-vw(3px);
+    }
+  }
+
+  &__content {
+    &--text {
+      margin-bottom: 2rem;
+      @include screen(desktop) {
+        margin-bottom: get-vw(20px);
+        &:nth-of-type(3) {
+          clear: both;
+        }
+        &:last-of-type {
+          margin-bottom: get-vw(40px);
+        }
+      }
+    }
+
+    &--more {
+      @include buttonAnim(195px, 50px, $themeColor, $themeColor);
+      margin: 0 auto;
+      @include screen(large) {
+        @include buttonAnim(225px, 50px, $themeColor, $themeColor);
+      }
+      &:focus,
+      &:hover,
+      &:active {
+        color: $cWhite;
+      }
+    }
+  }
+}
+
+.lightbox {
+  position: relative;
+  &__boxes {
+    display: grid;
+    grid-template-rows: repeat(9, 403px);
+    grid-row-gap: 30px;
+    @include screen(desktop) {
+      padding: get-vw(113px) 0 get-vw(83px);
+      grid-template-columns: repeat(3, get-vw(403px));
+      grid-template-rows: repeat(3, get-vw(403px));
+      grid-gap: get-vw(70px);
+    }
+    @include screen(large) {
+      justify-content: center;
+      padding: get-vw(113px) 0 get-vw(83px);
+      grid-template-columns: repeat(3, 31.3333%);
+      grid-template-rows: repeat(3, get-vw(403px));
+      grid-gap: 3%;
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover {
+      filter: brightness(0.5);
+    }
+    &--thumb {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__modal {
+    z-index: 9;
+    transition: 0.3s;
+    background: $cWhite;
+    width: 80%;
+    height: 500px;
+    padding-top: get-vw(171px);
+    @include absolute-center();
+    position: fixed;
+    @include screen(desktop) {
+      height: get-vw(889px);
+      width: 100%;
+    }
+    &.hidden {
+      opacity: 0;
+      height: 0;
+      visibility: hidden;
+    }
+    &--close {
+      position: absolute;
+      z-index: 10;
+      border: none;
+      background: none;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      object {
+        pointer-events: none;
+      }
+      @include screen(desktop) {
+        top: get-vw(102px);
+        right: get-vw(200px);
+      }
+    }
+
+    &--largeImg {
+      width: 50%;
+      @include screen(desktop) {
+        width: get-vw(945px);
+        height: get-vw(545px);
+      }
+    }
+  }
+}

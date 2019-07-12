@@ -1,0 +1,20 @@
+.footer {
+  background: $themeColor;
+  &__copy {
+    color: $cWhite;
+    font-size: 16px;
+    padding: 3rem 0;
+    @include screen(desktop) {
+      font-size: get-vw(16px);
+      padding: get-vw(30px) 0;
+    }
+    &--href {
+      color: $cWhite;
+      &:focus,
+      &:hover,
+      &:active {
+        color: $black;
+      }
+    }
+  }
+}

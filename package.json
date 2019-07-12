@@ -1,5 +1,5 @@
 {
-  "name": "html5_boilerplate_sass",
+  "name": "sample_pack",
   "version": "1.0.0",
   "private": true,
   "description": "",
@@ -9,11 +9,8 @@
     "build": "rm -rf build && cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "keywords": [],
-  "author": "Daniel Klose",
-  "contributors": {
-    "name": "Dugnist Alexey"
-  },
-  "license": "ISC OR GPL-3.0",
+  "author": "Łukasz Tymiński",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.3",
@@ -36,10 +33,5 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },
-  "dependencies": {},
-  "optionalDependencies": {
-    "bootstrap": "^4.1.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
-  }
+  "dependencies": {}
 }

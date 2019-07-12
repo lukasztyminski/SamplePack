@@ -1,0 +1,121 @@
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: '?',
+    svg: '#' + str-replace($name, ' ', '_'),
+  );
+
+  $formats: (
+    otf: 'opentype',
+    ttf: 'truetype',
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@mixin flex-center($direct) {
+  display: flex;
+  flex-direction: $direct;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin buttonAnim($w, $h, $c: $cWhite, $bg: $themeColor, $fs: 24px) {
+  color: $c;
+  font-size: $fs;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $w;
+  border-radius: 20px;
+  height: $h;
+  transition: background-color 0.3s, color 0.3s;
+  border: 3.29px solid $c;
+  text-transform: uppercase;
+  font-family: $themeFontExBold;
+  @include screen(desktop) {
+    border-radius: get-vw(20px);
+    border-width: get-vw(3.29px);
+    font-size: get-vw($fs);
+    line-height: get-vw($h);
+    height: get-vw($h);
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    transition-timing-function: ease-out;
+    border-color: $bg;
+    color: $c;
+    background: $bg;
+  }
+}
+
+@mixin vertical-center() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@function get-vw($target) {
+  $vw-context: (1366 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@mixin screen($size) {
+  $large: '(min-width: 1670px)';
+  $desktop: '(min-width: 992px)';
+  $tablet: '(min-width: 768px)';
+  $mobile: '(min-width: 576px)';
+  $webkit: '(-webkit-min-device-pixel-ratio:0)';
+
+  @if $size==large {
+    @media only screen and #{$large} {
+      @content;
+    }
+  } @else if $size==desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  } @else if $size==tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  } @else if $size==mobile {
+    @media only screen and #{$mobile} {
+      @content;
+    }
+  } @else if $size==webkit {
+    @media only screen and #{$webkit} {
+      @content;
+    }
+  } @else {
+    @media only screen and #{$size} {
+      @content;
+    }
+  }
+}

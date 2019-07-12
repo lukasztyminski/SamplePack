@@ -6,36 +6,37 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Half Time - strona w budowie</title>
+    <title>Grass Studio</title>
 
     <meta name="author" content="Łukasz Tymiński" />
 
     <meta itemprop="name" content="Half Time" />
-
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Half Time" />
-
-    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicons/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicons/manifest.json" />
 
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- Place favicon.ico in the root directory -->
-    <link type="text/plain" rel="author" href="humans.txt" />
-    <link rel="stylesheet" href="css/app.bundle.css" />
+    <link rel="stylesheet" href="../build/css/app.bundle.css" />
 
     <!--[if IE
       ]><script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script
@@ -43,20 +44,155 @@
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
+    <header class="header">
+      <div class="container">
+        <!-- Header/Top -->
+        <div class="header__top">
+          <!-- Header/Logo -->
+          <div class="header__logo">
+            <h1 class="header__logo--title">
+              <a class="header__logo--href" href="/" title="Grass Studio">Grass Studio</a>
+            </h1>
+          </div>
+          <!-- END Header/Logo -->
+          <input type="checkbox" id="close" />
+          <label class="header__switch" for="close">
+            <span class="header__switch--line"></span>
+            <span class="header__switch--line"></span>
+            <span class="header__switch--line"></span>
+          </label>
+          <!-- Header/NavMenu -->
+          <nav class="header__nav">
+            <ul class="header__navMenu"></ul>
+          </nav>
+          <!-- END Header/NavMenu -->
+        </div>
+        <!-- END Header/Top -->
+        <!-- Header/CTA -->
+        <div class="header__cta">
+          <h2 class="header__cta--title">Outdoor Photography <br />is a Journey</h2>
+          <div class="inline-flex">
+            <p class="header__cta--text">We spent three months exploring Icalnd</p>
+            <a href="#" class="header__cta--btn">Check it</a>
+          </div>
+        </div>
+        <!-- END Header/CTA -->
+      </div>
+    </header>
     <main role="main">
-      <section class="workInProgress">
-        <figure class="workInProgress__logo">
-          <img src="images/logo.png" alt="Logo Half Time" />
-        </figure>
-        <div class="workInProgress__info">
-          <h1 class="workInProgress__info--title">Strona w budowie</h1>
-          <h2 class="workInProgress__info--subtitle">startujemy niebawem!</h2>
+      <section class="sectionTitle">
+        <div class="container">
+          <h2 class="sectionTitle__title">Section title</h2>
+          <div class="sectionTitle__cols">
+            <p class="sectionTitle__col">
+              Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate , ligula
+              lacinia celerisque tempor, lacus lacus ornare ante. Ac egestas est urna sit amet arcu.
+              consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate ,
+              ligula lacinia celerisque tempor, lacus lacus.
+            </p>
+            <p class="sectionTitle__col">
+              Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula
+              lacinia celerisque tempor, lacus lacus ornare ante. Egestas est urna sit amet arcu.
+              consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate ,
+              ligula lacinia celerisque tempor, lacus.
+            </p>
+          </div>
         </div>
       </section>
-
-      <!-- example end -->
+      <section class="anotherTitle bgSection">
+        <div class="container">
+          <h2 class="anotherTitle__title">Another title</h2>
+          <article class="anotherTitle__content">
+            <figure class="anotherTitle__imgWrap">
+              <img
+                class="anotherTitle__imgWrap--img img-responsive"
+                src="/assets/images/figure_article.png"
+                alt="picture shows road"
+              />
+            </figure>
+            <p class="anotherTitle__content--text">
+              Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate , ligula
+              lacinia celerisque tempor, lacus lacus ornare ante. Ac egestas est urna sit amet arcu.
+              consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate ,
+              ligula lacinia celerisque tempor, lacus lacus ornare ante.
+            </p>
+            <p class="anotherTitle__content--text">
+              This is how a link looks like. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat
+              posuere. Vestibulum ante ipsum primis in faucibus la lacinia celerisque tempor, lacus
+              lacus ornare ante
+            </p>
+            <p class="anotherTitle__content--text">
+              Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate , ligula
+              lacinia celerisque tempor, lacus lacus ornare ante. Ac egestas est urna sit amet arcu.
+              consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate ,
+              ligula lacinia celerisque tempor, lacus lacus ornare ante.
+            </p>
+            <p class="anotherTitle__content--text">
+              This is how a link looks like. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat
+              posuere. Vestibulum ante ipsum primis in faucibus la lacinia celerisque tempor, lacus
+              lacus ornare anteorci luctus et ultrices posuere.Class aptent taciti sociosqu ad
+              litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit
+              amet leo consequat posuere. Vestibulum ante ipsum primis in faucibusorci luctus et
+              ultrices posuere.
+            </p>
+            <a class="anotherTitle__content--more" href="#">Read more</a>
+          </article>
+        </div>
+      </section>
+      <section class="lightbox">
+        <div class="lightbox__boxes">
+          <a class="lightbox__box" href="#img1">
+            <img src="/assets/images/g1.png" class="lightbox__box--thumb" />
+          </a>
+          <a class="lightbox__box" href="#img2">
+            <img src="/assets/images/g2.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+          <a class="lightbox__box" href="#img3">
+            <img src="/assets/images/g3.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+          <a class="lightbox__box" href="#img4">
+            <img src="/assets/images/g4.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+          <a class="lightbox__box" href="#img5">
+            <img src="/assets/images/g5.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+          <a class="lightbox__box" href="#img6">
+            <img src="/assets/images/g6.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+          <a class="lightbox__box" href="#img7">
+            <img src="/assets/images/g7.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+          <a class="lightbox__box" href="#img8">
+            <img src="/assets/images/g8.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+          <a class="lightbox__box" href="#img9">
+            <img src="/assets/images/g9.png" class="lightbox__box--thumb" alt="min picture" />
+          </a>
+        </div>
+        <div class="lightbox__modal hidden">
+          <button class="lightbox__modal--close">
+            <object class="" data="/assets/close.svg" type="image/svg+xml"></object>
+          </button>
+          <img class="lightbox__modal--largeImg" src="/assets/images/g1big.jpg" alt="big picture" />
+        </div>
+      </section>
     </main>
-
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copy">
+          All rights reserved
+          <a class="footer__copy--href" target="_blank" rel="noopener nofollow noreferrer" href="#"
+            >Grass Studio 2019</a
+          >
+        </p>
+      </div>
+    </footer>
     <script type="text/javascript" src="../build/app.js"></script>
   </body>
 </html>

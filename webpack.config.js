@@ -32,7 +32,7 @@ const CONFIG = {
         replacement: '',
       },
       {
-        pattern: '<link rel="stylesheet" href="./css/app.css">',
+        pattern: '<link rel="stylesheet" href="css/app.css" />',
         replacement: '',
       },
     ]),
@@ -42,12 +42,8 @@ const CONFIG = {
     }),
     new CopyWebpackPlugin([
       {
-        from: 'src/images/',
-        to: 'images/',
-      },
-      {
-        from: 'src/fonts/',
-        to: 'fonts/',
+        from: 'src/assets/',
+        to: 'assets/',
       },
     ]),
     new ImageminPlugin({
@@ -86,7 +82,7 @@ const CONFIG = {
   devServer: {
     contentBase: path.join(__dirname, 'src'),
     compress: true,
-    port: 3010,
+    port: 3000,
     hot: false,
     watchContentBase: true,
     noInfo: true,
